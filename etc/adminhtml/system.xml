@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="elsner" translate="label" sortOrder="10">
+            <label>ElsnerTech</label>
+        </tab>
+        <section id="helloworld" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>No Index Setup</label>
+            <tab>elsner</tab>
+            <resource>Elsnertech_Noindex::helloworld_config</resource>
+            <group id="general2" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>No Follow No Index</label> 
+                <field id="dynamic_field" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Dynamic Row</label>
+                    <frontend_model>Elsnertech\Noindex\Block\Adminhtml\Form\Field\Row</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
